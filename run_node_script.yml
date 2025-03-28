@@ -23,4 +23,4 @@ jobs:
 
       - name: Run Node.js script
         run: |
-          node tu_script.js  # Reemplaza con el nombre de tu script
+          node captura.js  # Reemplaza con el nombre de tu script
