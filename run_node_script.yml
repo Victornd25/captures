@@ -1,0 +1,26 @@
+name: Run Node.js script daily at 8AM
+
+on:
+  schedule:
+    - cron: '0 8 * * *'  # Esto ejecuta el script todos los días a las 8 AM UTC
+  workflow_dispatch:  # Esto permite ejecutar el flujo de trabajo manualmente
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2  # Clona tu repositorio en el entorno de ejecución
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'  # O la versión de Node.js que estés usando
+
+      - name: Install dependencies
+        run: |
+          npm install  # Esto instalará todas las dependencias de tu proyecto
+
+      - name: Run Node.js script
+        run: |
+          node tu_script.js  # Reemplaza con el nombre de tu script
