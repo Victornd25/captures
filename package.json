@@ -1,0 +1,18 @@
+{
+  "name": "captura-screenshot",
+  "version": "1.0.0",
+  "description": "Script para capturar pantallazos de sitios web",
+  "main": "captura.js",
+  "scripts": {
+    "start": "node captura.js"
+  },
+  "dependencies": {
+    "puppeteer": "^20.0.0"  // Asegúrate de usar la versión de Puppeteer que necesitas
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
